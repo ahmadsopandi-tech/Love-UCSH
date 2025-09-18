@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Cinta dari Ahmad untuk Nhaila ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe0ec 50%, #ffd6e7 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #333;
+            position: relative;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Header Styles */
+        .header {
+            text-align: center;
+            padding: 60px 0;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            color: #d63384;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        .header h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #e75480;
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards 0.5s;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Opening Section */
+        .opening {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 8px 32px rgba(214, 51, 132, 0.15);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            text-align: center;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #555;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .opening.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Letter Section */
+        .letter-section {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 50px;
+            margin: 40px 0;
+            box-shadow: 0 8px 32px rgba(214, 51, 132, 0.15);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .letter-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .letter p {
+            font-size: 1.3rem;
+            line-height: 1.9;
+            color: #444;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        
+        /* Closing Section */
+        .closing {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 8px 32px rgba(214, 51, 132, 0.15);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            text-align: center;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #555;
+            font-style: italic;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .closing.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Sweet Talk Section */
+        .sweet-talk {
+            text-align: center;
+            padding: 40px 0;
+            margin: 40px 0;
+        }
+        
+        .sweet-talk p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #d63384;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .sweet-talk p.visible {
+            animation: fadeInUp 1.5s ease forwards;
+        }
+        
+        .sweet-talk p:last-child {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Final Message */
+        .final-message {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+        
+        .final-message h3 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            color: #d63384;
+            animation: pulse 2s infinite;
+        }
+        
+        /* Floating hearts animation */
+        .heart {
+            position: fixed;
+            top: -20px;
+            z-index: 0;
+            animation: floatDown 10s linear infinite;
+            color: rgba(214, 51, 132, 0.7);
+            font-size: 20px;
+        }
+        
+        @keyframes floatDown {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 3.5rem;
+            }
+            
+            .header h2 {
+                font-size: 2rem;
+            }
+            
+            .opening, .closing {
+                font-size: 1.2rem;
+                padding: 30px 20px;
+            }
+            
+            .letter p {
+                font-size: 1.2rem;
+            }
+            
+            .letter-section {
+                padding: 30px 20px;
+            }
+            
+            .sweet-talk p {
+                font-size: 1.8rem;
+            }
+            
+            .sweet-talk p:last-child {
+                font-size: 2.2rem;
+            }
+            
+            .final-message h3 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Ahmad ❤️ Nhaila</h1>
+            <h2>Undangan Cinta Seumur Hidup</h2>
+        </header>
+        
+        <section class="opening">
+            <p>Dengan penuh rasa cinta dan kerendahan hati, aku, Ahmad, mengundangmu, Nhaila, untuk kembali tersenyum, memaafkan ketiduran singkatku, dan terus bersama dalam perjalanan panjang bernama cinta.</p>
+        </section>
+        
+        <section class="letter-section">
+            <div class="letter">
+                <p>Yang terkasih Nhaila, dengan tulus aku memohon maaf atas ketiduranku yang telah membuatmu marah. Aku tahu bahwa waktumu berharga, dan setiap detik yang kita habiskan bersama adalah berlian tak ternilai. Aku bersalah karena telah membuatmu menunggu, dan aku memohon ampun atas ketidakpedulianku yang sekejap itu.</p>
+                
+                <p>Dalam keheningan malam itu, ketika aku terlelap, mimpiku hanya diisi oleh senyummu. Cintaku padamu adalah samudra yang tak bertepi, adalah langit yang tak berbatas. Setiap nafasku adalah doa untuk kebahagiaanmu, setiap detak jantungku adalah irama dari namamu. Kamu adalah cahaya dalam gelapku, adalah pelabuhan dalam badai hidupku.</p>
+                
+                <p>Dengan ini aku berjanji, akan lebih berhati-hati dan memperhatikanmu. Aku akan menjaga setiap janjiku, menghargai setiap waktumu, dan menghormati setiap perasaanmu. Aku akan menjadi pendengar yang lebih baik, pendukung yang lebih kuat, dan kekasih yang lebih setia. Aku akan mengorbankan tidurku demi senyummu, karena melihatmu bahagia adalah kebahagiaan terbesarku.</p>
+                
+                <p>Setiap hari bersamamu adalah anugerah yang tak terhingga nilainya. Aku bersyukur kepada Tuhan karena telah mempertemukan kita, karena telah mengizinkanku mencintaimu dan dicintai olehmu. Dalam matamu, aku menemukan kedamaian; dalam pelukanmu, aku menemukan rumah. Kamu adalah bagian terpenting dalam hidupku, dan aku tidak bisa membayangkan hidup tanpamu.</p>
+            </div>
+        </section>
+        
+        <section class="closing">
+            <p>Demi langit yang menjadi saksi dan bumi yang mendengar setiap doa, dengan ini aku mengundangmu, Nhaila, untuk menghadiri cinta yang tidak akan pernah usai, cinta yang hanya milik kita berdua.</p>
+        </section>
+        
+        <section class="sweet-talk">
+            <p>Aku memang ketiduran sebentar, tapi cintaku padamu tak pernah tidur. Kalau aku bisa memilih, aku lebih rela nggak tidur seumur hidup asalkan bisa terus menjaga senyummu.</p>
+            <p>Jadi, bersediakah kamu menerima undangan ini, Sayang? ❤️</p>
+        </section>
+        
+        <section class="final-message">
+            <h3>I Love You, Nhaila</h3>
+        </section>
+    </div>
+
+    <script>
+        // Create falling hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            
+            // Random position
+            const leftPos = Math.random() * 100;
+            heart.style.left = `${leftPos}%`;
+            
+            // Random size
+            const size = Math.random() * 20 + 10;
+            heart.style.fontSize = `${size}px`;
+            
+            // Random animation duration
+            const duration = Math.random() * 10 + 10;
+            heart.style.animationDuration = `${duration}s`;
+            
+            document.body.appendChild(heart);
+            
+            // Remove heart after animation completes
+            setTimeout(() => {
+                heart.remove();
+            }, duration * 1000);
+        }
+        
+        // Create hearts periodically
+        setInterval(createHeart, 800);
+        
+        // Fade in animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements
+        document.querySelectorAll('.opening, .letter-section, .closing').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Animate sweet talk messages sequentially
+        const sweetTalkMessages = document.querySelectorAll('.sweet-talk p');
+        const sweetTalkObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const messages = entry.target.querySelectorAll('p');
+                    messages.forEach((msg, index) => {
+                        setTimeout(() => {
+                            msg.classList.add('visible');
+                        }, index * 1000);
+                    });
+                    sweetTalkObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        sweetTalkObserver.observe(document.querySelector('.sweet-talk'));
+    </script>
+</body>
+</html>
